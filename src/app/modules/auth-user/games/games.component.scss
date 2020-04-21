@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 100%;
+    > * {
+        margin: 5px 0;
+    }
+}

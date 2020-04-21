@@ -1,0 +1,10 @@
+<section>
+    <div *ngFor="let vendor of (vendors$ | async); let idx = index; trackBy: trackByFn" 
+         class="vendor"
+         [ngClass]="{active: idx === selectedVendor}" (click)="getVendorGames(vendor, idx)">
+        <span class="vendor-img">
+            <img [src]="vendor.defaultImage" [title]="vendor.name" />
+        </span>
+        <span class="vendor-name">{{ vendor.name.length > 10 ? vendor.shortcode : vendor.name }}</span>
+    </div>
+</section>

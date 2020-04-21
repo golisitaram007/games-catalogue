@@ -1,0 +1,19 @@
+<section>
+    <div class="title">
+        <span>{{ label }}</span>
+        <button class="info" (click)="showAllGames(label, data)">See All</button>
+    </div>
+    <ng-container *ngIf="data?.length; else noData">
+        <div class="content" [ngClass]="{twoCol: grid == 2, threeCol: grid == 3, default: grid == 1}">
+            <span *ngFor="let game of data | slice: 0 : size; let i = index; trackBy: trackByFn">
+                <span class="gameImage"><img [src]="game.image" [title]="game.name" /></span>
+                <span class="titleElipsis">{{ game.name }}</span>
+            </span>
+        </div>
+    </ng-container>
+    <ng-template #noData>
+        <span class="noData">
+            <p>No games listed in {{ label }}</p>
+        </span>
+    </ng-template>
+</section>

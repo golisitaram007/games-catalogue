@@ -1,0 +1,7 @@
+<nav>
+    <h3>Welcome, {{ (user$ | async)?.username || 'App User' }}</h3>
+</nav>
+<div>
+    <router-outlet></router-outlet>
+</div>
+

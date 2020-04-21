@@ -1,0 +1,46 @@
+@import './../../../mixin';
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .loginform {
+        color: var(--text-default);
+        width: 75%;
+        .companyTitle {
+            display: flex;
+            justify-content: center;
+        }
+        form {
+            flex-basis: 25%;
+            background-color: var(--secondary);
+            padding: 2rem;
+            display: flex;
+            flex-flow: column nowrap;
+            box-shadow: 0px 0px 10px 0px var(--info);
+            @include border-radius(10px);
+            > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 1rem 0;
+                input {
+                    flex-grow: 1;
+                }
+            }
+            button {
+                width: 100%;
+                padding: 1rem 0.5rem;
+            }
+            .invalid-field {
+                color: #ccc;
+                font-size: 0.8rem;
+                background: maroon;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

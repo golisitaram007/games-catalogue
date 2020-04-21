@@ -1,0 +1,14 @@
+<div infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()"
+    [scrollWindow]="false">
+    <span *ngFor="let item of initialData">
+        <span class="gameImage"><img [src]="item.image" [title]="item.name"/></span>
+        <span class="titleElipsis">{{ item.name }}</span>
+    </span>
+</div>
+<div class="loader" *ngIf="loading">
+    <p class="loading">Loading....</p>
+</div>
+

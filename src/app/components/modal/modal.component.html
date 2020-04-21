@@ -1,0 +1,9 @@
+<div class="modal flex f-col">
+    <div class="modal-header">
+        <span class="title">{{ (modalOptions$ | async)?.label }}</span>
+        <span class="close" (click)="closeModal()">
+            &times;
+        </span>
+    </div>
+    <div id="modal-container" class=""></div>
+</div>

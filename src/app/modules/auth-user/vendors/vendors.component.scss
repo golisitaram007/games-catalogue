@@ -1,0 +1,31 @@
+:host {
+    height: 5rem;
+    section {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: auto;
+        height: 100%;
+        .vendor {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.4;
+            cursor: pointer;
+            &-img {
+                width: 4rem;
+                img {
+                    width: 100%;
+                }
+            }
+            &-name {
+                font-size: 0.7rem;
+            }
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
